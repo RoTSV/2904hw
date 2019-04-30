@@ -1,0 +1,85 @@
+.wrap {
+  padding: 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "lg cs_lo . . . inp inp pl_on pl_on ocean ocean ocean" "sword . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . ." "mn . . . . . . . . . . .";
+}
+
+.wrap div {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.wrap .div-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: lg;
+}
+
+.wrap .div-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: cs_lo;
+}
+
+.wrap .div-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: inp;
+}
+
+.wrap .div-4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-area: pl_on;
+}
+
+.wrap .div-5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-area: ocean;
+}
+
+.wrap .div-6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sword;
+}
+
+.wrap .div-7 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 10;
+  -ms-grid-column: 1;
+  grid-area: mn;
+  background-color: black;
+}
+
+@media (min-width: 320px) and (max-width: 495px) {
+  .wrap {
+    padding: 0;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+  }
+  .wrap div {
+    border: 1px solid black;
+    text-align: center;
+  }
+  .wrap .div-3 {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+}
+/*# sourceMappingURL=style.css.map */

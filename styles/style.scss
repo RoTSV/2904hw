@@ -1,0 +1,72 @@
+
+.wrap {
+    padding: 0;
+    margin: 0 auto;
+    display: grid;  
+    
+    grid-template-areas: "lg cs_lo . . . inp inp pl_on pl_on ocean ocean ocean"
+                        "sword . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . ."
+                        "mn . . . . . . . . . . .";
+
+    div{
+        border: 1px solid black;
+        text-align: center;
+    }
+    .div-1{
+        grid-area: lg;
+
+    }
+    .div-2{
+        grid-area: cs_lo;
+        
+    }
+    .div-3{
+        grid-area: inp;
+        
+    }
+    .div-4{
+        grid-area: pl_on;
+    }
+    .div-5{
+        grid-area: ocean;
+    }
+    .div-6{
+        grid-area: sword;
+    }
+    .div-7{
+        grid-area: mn;
+        background-color: black;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 495px) {
+
+    .wrap {
+        padding: 0;
+        margin: 0 auto;
+        display: grid;  
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        div{
+            border: 1px solid black;
+            text-align: center;
+        }
+        .div-3 {
+            grid-column: 4;
+            grid-row: 4;
+        }
+    }
+}
+
+
